@@ -24,7 +24,7 @@ python test_interop.py
 python test_mutations.py
 ```
 
-`test_interop.py` checks corpus bytes and exact IDs, scores both implementations, exercises 26 strict-wire cases and four separate-file CLI invocations, and checks literal JCS Unicode bytes and RFC 8032's first Ed25519 known-answer vector. It prints a JSON report without changing committed files. `interop-results.json` records one run, including source hashes.
+`test_interop.py` checks corpus bytes and exact IDs, scores both implementations, exercises 27 strict-wire cases and four separate-file CLI invocations, and checks literal JCS Unicode bytes and RFC 8032's first Ed25519 known-answer vector. It prints a JSON report without changing committed files. `interop-results.json` records one run, including source hashes.
 
 `test_mutations.py` removes seven selected Python semantic gates and duplicate rejection from each wire parser. The seven semantic mutations must disagree with at least one authored result; removing duplicate detection must admit the duplicate-key counterexample. These nine probes supplement the 25 existing Node checker mutations. They are not an exhaustive fault model.
 

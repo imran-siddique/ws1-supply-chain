@@ -58,6 +58,7 @@ def check():
         ("bad-escape", b'{"a":"\\x20"}', "WIRE_JSON"),
         ("nonfinite", b'{"a":NaN}', "WIRE_JSON"),
         ("overflow-number", b'{"a":1e999}', "WIRE_JSON"),
+        ("integer-above-double", b'{"a":' + b'9'*309 + b'}', "WIRE_JSON"),
         ("oversized-integer", b'{"a":' + b'9'*5000 + b'}', "WIRE_JSON"),
         ("too-deep", b'[' * (MAX_DEPTH + 1) + b'0' + b']' * (MAX_DEPTH + 1), "WIRE_LIMIT"),
         ("too-large", b' ' * (MAX_BYTES + 1), "WIRE_LIMIT"),

@@ -2,9 +2,9 @@
   "status": "pass",
   "candidates": 82,
   "matched": 82,
-  "wire_checks": 26,
+  "wire_checks": 27,
   "cli_checks": 4,
-  "python": "3.11.16",
+  "python": "3.12.10",
   "libraries": {
     "jsonschema": "4.26.0",
     "rfc8785": "0.1.4",
@@ -12,11 +12,11 @@
   },
   "vector_sha256": "317cffee10c02c766acf65837fc9bb870c4f589a1819b4269cac699a6577ba81",
   "source_sha256": {
-    "verify.py": "c3d44d01027e22af3f37fd905b56509135e8769ae2131e4852727e9ccbce2abb",
+    "verify.py": "a94cda34ea5f423795bdca66b7dc729397033b4f53f2ba5d3b762686435e0d1d",
     "wire.mjs": "e7348470ef2513ea612c58e5903ea84cddbd31ef58e31d6c10e3b988f6507f56",
     "check-wire.mjs": "88125e82cfea161bdfc816aede49be56b1b3469423be4cf83f0ec03c36f0fd94",
     "wire-worker.mjs": "c5a2086977cdc4a3ed5ad9e819c0d0a8bff2436d378aaa35cdf1102d5c0114b6",
-    "test_interop.py": "9a09cbb03e7480aed8215d9c644c2e532e712f541d48bccc88d182d2ee766435",
+    "test_interop.py": "fd09906019051496cbfad57b413a75656812494026549b265006db2f4893e529",
     "test_mutations.py": "b45bed1271b2e333cfbf1d1f76970b81fed894564ce89964b4ca86e630606138",
     "requirements.txt": "faf951f15d2986d9a4bae15b86aa0901a74665b730efde241b2269bc70113c42"
   },

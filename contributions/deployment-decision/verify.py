@@ -91,8 +91,16 @@ def parse_wire(data: bytes):
             raise WireError("WIRE_JSON")
         return parsed
 
+    # An integer literal past the largest finite double overflows to Infinity
+    # in JSON.parse, and wire.mjs refuses it there. Refuse the same range here
+    # instead of relying on CPython's int_max_str_digits ceiling.
+    def integer(value):
+        if not math.isfinite(float(value)):
+            raise WireError("WIRE_JSON")
+        return int(value)
+
     try:
-        result = json.loads(text, object_pairs_hook=pairs, parse_constant=bad_constant, parse_float=number)
+        result = json.loads(text, object_pairs_hook=pairs, parse_constant=bad_constant, parse_float=number, parse_int=integer)
     except WireError:
         raise
     except (ValueError, RecursionError) as exc:
